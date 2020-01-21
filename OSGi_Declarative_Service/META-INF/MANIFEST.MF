@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGi_Declarative__Service
+Bundle-SymbolicName: OSGi_Declarative__Service
+Bundle-Version: 1.0.0
+Automatic-Module-Name: OSGi_Declarative__Service
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
