@@ -1,4 +1,5 @@
-/OSGi_Declarative_Service/bin/*
-/OSGi_Declarative_Service/.classpath
-/OSGi_Declarative_Service/.project
-/OSGi_Declarative_Service/.metadata/
+**/OSGi_Declarative_Service/bin/**
+**/OSGi_Declarative_Service/.classpath
+**/OSGi_Declarative_Service/.project
+**/OSGi_Declarative_Service/.metadata/
+
