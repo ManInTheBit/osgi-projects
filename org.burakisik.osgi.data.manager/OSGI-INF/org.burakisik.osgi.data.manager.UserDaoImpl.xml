@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" activate="activate" name="org.burakisik.osgi.data.manager.UserDaoImpl">
+   <service>
+      <provide interface="org.burakisik.osgi.data.manager.dao.UserDao"/>
+   </service>
+   <reference cardinality="1..1" field="jdbcConnectionProvider" interface="org.osgi.service.transaction.control.jdbc.JDBCConnectionProvider" name="provider"/>
+   <reference cardinality="1..1" field="transactionControl" interface="org.osgi.service.transaction.control.TransactionControl" name="transactionControl"/>
+   <implementation class="org.burakisik.osgi.data.manager.UserDaoImpl"/>
+</scr:component>
