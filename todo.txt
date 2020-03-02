@@ -1,2 +1,6 @@
 extend user-interface bundle
 extend data-manager bundle
+event-admin(pub/sub)
+custom logger by extending core java logger
+add serviceTracker
+use configuration(with annotation)

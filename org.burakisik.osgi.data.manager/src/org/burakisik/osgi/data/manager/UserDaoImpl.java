@@ -39,34 +39,33 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	private UserDTO mapRecordToUserDTO(ResultSet rs) throws SQLException {
-		UserDTO user = new UserDTO();
-		user.setId(rs.getLong(USER_TABLE_ID_COLUMN));
-		user.setUsername(rs.getString(USER_TABLE_USER_NAME_COLUMN));
-		user.setPassword(rs.getString(USER_TABLE_PASSWORD_COLUMN));
+		UserDTO user = UserDTO.builder().id(rs.getLong(USER_TABLE_ID_COLUMN))
+				.username(rs.getString(USER_TABLE_USER_NAME_COLUMN))
+				.password(rs.getString(USER_TABLE_PASSWORD_COLUMN)).build();
 		return user;
 	}
 
 	@Override
 	public void save(UserDTO user) {
 		transactionControl.required(() -> {
-	        PreparedStatement ps = connection.prepareStatement(SQL_INSERT_USER);
-	        ps.setString(1, user.getUsername());
-	        ps.setString(2, user.getPassword());
-	        ps.executeUpdate();       
-	        return null;
-	    });
+			PreparedStatement ps = connection.prepareStatement(SQL_INSERT_USER);
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getPassword());
+			ps.executeUpdate();
+			return null;
+		});
 	}
 
 	@Override
 	public void update(UserDTO user) {
 		transactionControl.required(() -> {
-	        PreparedStatement ps = connection.prepareStatement(SQL_UPDATE_USER_BY_PK);
-	        ps.setString(1, user.getUsername());
-	        ps.setString(2, user.getPassword());
-	        ps.setLong(3, user.getId());
-	        ps.executeUpdate();       
-	        return null;
-	    });
+			PreparedStatement ps = connection.prepareStatement(SQL_UPDATE_USER_BY_PK);
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getPassword());
+			ps.setLong(3, user.getId());
+			ps.executeUpdate();
+			return null;
+		});
 	}
 
 	@Override
