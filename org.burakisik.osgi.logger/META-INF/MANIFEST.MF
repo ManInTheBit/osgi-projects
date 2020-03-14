@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: exception-handler
-Bundle-SymbolicName: org.burakisik.osgi.exception
+Bundle-Name: logger
+Bundle-SymbolicName: org.burakisik.osgi.logger
 Bundle-Version: 1.0.0.qualifier
-Export-Package: org.burakisik.osgi.exception
+Export-Package: org.burakisik.osgi.logger
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.burakisik.osgi.exception
 Import-Package: org.eclipse.osgi.framework.console;version="1.0.0",

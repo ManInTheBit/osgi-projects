@@ -1,4 +1,4 @@
-package org.burakisik.osgi.exception;
+package org.burakisik.osgi.functional.interfaces;
 
 
 import org.osgi.service.component.annotations.*;
