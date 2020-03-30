@@ -7,6 +7,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.burakisik.osgi.app
 Import-Package: org.burakisik.osgi.declarative.service,
  org.burakisik.osgi.declarative.service.model,
+ org.burakisik.osgi.logger,
  org.burakisik.osgi.user.interfaces,
  org.eclipse.osgi.framework.console;version="1.0.0",
  org.osgi.framework;version="1.3.0",
