@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: exception-handler
+Bundle-SymbolicName: ExceptionHandler
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.burakisik.osgi.exception
+Automatic-Module-Name: org.burakisik.osgi.exception
+Import-Package: org.eclipse.osgi.framework.console;version="1.0.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component.annotations;version="1.2.0";resolution:="optional",
+ org.osgi.util.tracker;version="1.3.1"
+Service-Component: OSGI-INF/*.xml
+Bundle-ActivationPolicy: lazy
