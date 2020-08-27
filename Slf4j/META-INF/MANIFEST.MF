@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Log4j
-Bundle-SymbolicName: Log4j
+Bundle-SymbolicName: Slf4j
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.burakisik.osgi.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Import-Package: org.apache.logging.log4j;version="2.13.3",
- org.osgi.service.component.annotations
+Import-Package: org.osgi.service.component.annotations,
+ org.slf4j;version="1.7.9"
 Service-Component: OSGI-INF/com.burakisik.osgi.log.LogComponent.xml
 Bundle-ActivationPolicy: lazy
