@@ -1,9 +1,0 @@
-extend user-interface bundle
-extend data-manager bundle
-event-admin(pub/sub)
-add serviceTracker
-use configuration(with annotation)
-custom logger(add breakpointlike feature)
-
-add AOP for logging, security and error handing -> https://doc.postsharp.net/method-interception
- 
