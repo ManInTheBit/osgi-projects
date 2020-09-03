@@ -12,13 +12,13 @@ import org.osgi.service.event.EventAdmin;
 
 
 
-@Component(property = { "osgi.command.scope=test", "osgi.command.function=test2" }, service = CommanderCommand.class)
+@Component(property = { "osgi.command.scope=burakisik", "osgi.command.function=publish" }, service = CommanderCommand.class)
 public class CommanderCommand {
 
 	@Reference
 	EventAdmin eventAdmin;
 
-	public void test2(String command, String target) {
+	public void publish(String command, String target) {
 
 		Map<String, Object> properties = new HashMap<>();
 		properties.put(CommanderConstants.TARGET, target);
