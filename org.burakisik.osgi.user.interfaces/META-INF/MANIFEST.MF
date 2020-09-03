@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: user-interface
+Bundle-SymbolicName: org.burakisik.osgi.user.interfaces
+Bundle-Version: 1.0.0.v20200228-1453
+Export-Package: org.burakisik.osgi.user.interfaces
+Automatic-Module-Name: org.burakisik.osgi.user.interface
+Import-Package: org.apache.log4j;version="1.2.17",
+ org.eclipse.osgi.framework.console;version="1.0.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component.annotations;version="1.2.0";resolution:=optional,
+ org.osgi.util.tracker;version="1.3.1"
+Service-Component: OSGI-INF/*.xml
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-11

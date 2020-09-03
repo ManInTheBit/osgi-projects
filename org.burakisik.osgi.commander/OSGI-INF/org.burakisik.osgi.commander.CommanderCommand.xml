@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.burakisik.osgi.commander.CommanderCommand">
+   <property name="osgi.command.scope" value="test"/>
+   <property name="osgi.command.function" value="test2"/>
+   <service>
+      <provide interface="org.burakisik.osgi.commander.CommanderCommand"/>
+   </service>
+   <reference cardinality="1..1" field="eventAdmin" interface="org.osgi.service.event.EventAdmin" name="eventAdmin"/>
+   <implementation class="org.burakisik.osgi.commander.CommanderCommand"/>
+</scr:component>

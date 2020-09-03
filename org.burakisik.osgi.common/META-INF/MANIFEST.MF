@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Common
+Bundle-SymbolicName: org.burakisik.osgi.common
+Bundle-Version: 1.0.0
+Automatic-Module-Name: org.burakisik.osgi.common
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.burakisik.osgi.common

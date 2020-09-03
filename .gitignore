@@ -3,4 +3,7 @@
 **/OSGi_Declarative_Service/.project
 **/OSGi_Declarative_Service/.metadata/
 
+target-old/**
 /.metadata/
+app.log
+todo.txt
