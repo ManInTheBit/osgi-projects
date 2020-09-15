@@ -16,11 +16,13 @@
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.8"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dlog4j.debug=false  -Dlog4j.configuration=file:C:\Users\burak\Desktop\osgi-projects\log4j.xml"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\burak\Desktop\osgi-projects"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <setAttribute key="selected_target_bundles">
-<setEntry value="javax.persistence*1.0.0.qualifier@default:default"/>
-<setEntry value="javax.persistence*1.99.0@default:default"/>
+<setEntry value="javax.persistence@default:default"/>
+<setEntry value="log4j.apache-log4j-extras@default:default"/>
+<setEntry value="log4j@default:default"/>
 <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
 <setEntry value="org.apache.felix.gogo.shell@default:default"/>
 <setEntry value="org.apache.felix.scr@1:true"/>
@@ -29,21 +31,23 @@
 <setEntry value="org.eclipse.osgi.util@default:default"/>
 <setEntry value="org.eclipse.osgi@-1:true"/>
 <setEntry value="org.osgi.service.jdbc@default:default"/>
-<setEntry value="org.osgi.service.jpa*1.0.0.201505202024@default:default"/>
-<setEntry value="org.osgi.service.jpa*1.1.0.201802012106@default:default"/>
+<setEntry value="org.osgi.service.jpa@default:default"/>
 <setEntry value="org.osgi.service.transaction.control@default:default"/>
 </setAttribute>
 <setAttribute key="selected_workspace_bundles">
-<setEntry value="App@default:default"/>
-<setEntry value="ConsoleCommand@default:default"/>
-<setEntry value="CustomLogger@default:default"/>
-<setEntry value="DataManager@default:default"/>
-<setEntry value="DeclerativeServiceExample@default:default"/>
-<setEntry value="ExceptionHandler@default:default"/>
-<setEntry value="FunctionalInterfaces@default:default"/>
-<setEntry value="Log4j@default:default"/>
-<setEntry value="UserInterfaces@default:default"/>
-<setEntry value="Validation@default:default"/>
+<setEntry value="com.burakisik.osgi.log@default:default"/>
+<setEntry value="org.burakisik.osgi.annotations@default:default"/>
+<setEntry value="org.burakisik.osgi.app@default:default"/>
+<setEntry value="org.burakisik.osgi.commander@default:default"/>
+<setEntry value="org.burakisik.osgi.common@default:default"/>
+<setEntry value="org.burakisik.osgi.custom.console.commands@default:default"/>
+<setEntry value="org.burakisik.osgi.data.manager@default:default"/>
+<setEntry value="org.burakisik.osgi.declarative.service@default:default"/>
+<setEntry value="org.burakisik.osgi.exception.handler@default:default"/>
+<setEntry value="org.burakisik.osgi.functional.interfaces@default:default"/>
+<setEntry value="org.burakisik.osgi.logger@default:default"/>
+<setEntry value="org.burakisik.osgi.soldier@default:default"/>
+<setEntry value="org.burakisik.osgi.user.interfaces@default:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
 <booleanAttribute key="tracing" value="false"/>

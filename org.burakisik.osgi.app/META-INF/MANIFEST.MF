@@ -5,6 +5,8 @@ Bundle-SymbolicName: org.burakisik.osgi.app
 Bundle-Version: 1.0.0.v20200301-1918
 Automatic-Module-Name: org.burakisik.osgi.app
 Import-Package: org.apache.log4j;version="1.2.17",
+ org.apache.logging.log4j;version="2.3.0",
+ org.apache.logging.log4j.core;version="2.3.0",
  org.burakisik.osgi.declarative.service,
  org.burakisik.osgi.declarative.service.model,
  org.burakisik.osgi.logger,

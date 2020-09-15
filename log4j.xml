@@ -4,8 +4,8 @@
             <PatternLayout pattern="%logger/%class [%level] %message%n" />
         </Console>
         <RollingFile name="file" append="true">
-            <fileName>logs/service.log</fileName>
-            <filePattern>logs/service.log.%d{yyyy-MM}</filePattern>
+            <fileName>logs/app.log</fileName>
+            <filePattern>logs/app.log.%d{yyyy-MM}</filePattern>
             <PatternLayout pattern="%logger/%class [%level] %mdc %message%n" />
             <Policies>
                 <TimeBasedTriggeringPolicy  />
@@ -14,7 +14,7 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="my.logger" level="info" additivity="false">
+        <Logger name="app.logger" level="info" additivity="false">
             <AppenderRef ref="file" />
         </Logger>
         <Root level="debug">
