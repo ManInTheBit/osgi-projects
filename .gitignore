@@ -7,3 +7,4 @@ target-old/**
 /.metadata/
 app.log
 todo.txt
+/logs
