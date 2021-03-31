@@ -39,9 +39,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	private UserDTO mapRecordToUserDTO(ResultSet rs) throws SQLException {
-		UserDTO user = UserDTO.builder().id(rs.getLong(USER_TABLE_ID_COLUMN))
-				.username(rs.getString(USER_TABLE_USER_NAME_COLUMN))
-				.password(rs.getString(USER_TABLE_PASSWORD_COLUMN)).build();
+		UserDTO user = new UserDTO(rs.getLong(USER_TABLE_ID_COLUMN), rs.getString(USER_TABLE_USER_NAME_COLUMN),rs.getString(USER_TABLE_PASSWORD_COLUMN));
 		return user;
 	}
 
@@ -49,8 +47,8 @@ public class UserDaoImpl implements UserDao {
 	public void save(UserDTO user) {
 		transactionControl.required(() -> {
 			PreparedStatement ps = connection.prepareStatement(SQL_INSERT_USER);
-			ps.setString(1, user.getUsername());
-			ps.setString(2, user.getPassword());
+			ps.setString(1, user.username());
+			ps.setString(2, user.password());
 			ps.executeUpdate();
 			return null;
 		});
@@ -60,9 +58,9 @@ public class UserDaoImpl implements UserDao {
 	public void update(UserDTO user) {
 		transactionControl.required(() -> {
 			PreparedStatement ps = connection.prepareStatement(SQL_UPDATE_USER_BY_PK);
-			ps.setString(1, user.getUsername());
-			ps.setString(2, user.getPassword());
-			ps.setLong(3, user.getId());
+			ps.setString(1, user.username());
+			ps.setString(2, user.password());
+			ps.setLong(3, user.id());
 			ps.executeUpdate();
 			return null;
 		});

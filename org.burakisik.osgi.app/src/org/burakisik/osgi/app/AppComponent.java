@@ -1,6 +1,7 @@
 package org.burakisik.osgi.app;
 
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.burakisik.osgi.declarative.service.EmergencyService;
 import org.burakisik.osgi.declarative.service.GpsService;
 import org.burakisik.osgi.logger.OSGiLoggerComponent;
@@ -13,8 +14,7 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 @Component
 public class AppComponent {
 
-	//private final static Logger logger = LogManager.getLogger(AppComponent.class);
-	private final static Logger logger = org.apache.logging.log4j.LogManager.getLogger(AppComponent.class);
+	private final static Logger logger = LogManager.getLogger(AppComponent.class);
 
 	@Activate
 	protected void activate() {
