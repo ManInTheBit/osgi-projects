@@ -2,17 +2,17 @@ package org.burakisik.osgi.data.manager.dao;
 
 import java.util.List;
 
-import org.burakisik.osgi.data.manager.dao.dto.UserDTO;
+import org.burakisik.osgi.data.manager.dao.dto.User;
 
 public interface UserDao {
 	
-	public UserDTO getByPK(Long id);
+	public User getByPK(Long id);
 	
-	public List<UserDTO> getAllUser();
+	public List<User> getAllUser();
 
-	public void save(UserDTO user);
+	public void save(User user);
 	
-	public void update(UserDTO user);
+	public void update(User user);
 	
 	public void deleteById(long id);
 }

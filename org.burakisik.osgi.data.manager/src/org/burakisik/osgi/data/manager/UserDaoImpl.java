@@ -11,7 +11,7 @@ import java.util.Map;
 import static org.burakisik.osgi.data.manager.Constant.*;
 
 import org.burakisik.osgi.data.manager.dao.UserDao;
-import org.burakisik.osgi.data.manager.dao.dto.UserDTO;
+import org.burakisik.osgi.data.manager.dao.dto.User;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -38,13 +38,13 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
-	private UserDTO mapRecordToUserDTO(ResultSet rs) throws SQLException {
-		UserDTO user = new UserDTO(rs.getLong(USER_TABLE_ID_COLUMN), rs.getString(USER_TABLE_USER_NAME_COLUMN),rs.getString(USER_TABLE_PASSWORD_COLUMN));
+	private User mapRecordToUserDTO(ResultSet rs) throws SQLException {
+		User user = new User(rs.getLong(USER_TABLE_ID_COLUMN), rs.getString(USER_TABLE_USER_NAME_COLUMN),rs.getString(USER_TABLE_PASSWORD_COLUMN));
 		return user;
 	}
 
 	@Override
-	public void save(UserDTO user) {
+	public void save(User user) {
 		transactionControl.required(() -> {
 			PreparedStatement ps = connection.prepareStatement(SQL_INSERT_USER);
 			ps.setString(1, user.username());
@@ -55,7 +55,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public void update(UserDTO user) {
+	public void update(User user) {
 		transactionControl.required(() -> {
 			PreparedStatement ps = connection.prepareStatement(SQL_UPDATE_USER_BY_PK);
 			ps.setString(1, user.username());
@@ -78,16 +78,16 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public List<UserDTO> getAllUser() {
+	public List<User> getAllUser() {
 		return transactionControl.notSupported(() -> {
 
-			List<UserDTO> userList = new ArrayList<>();
+			List<User> userList = new ArrayList<>();
 
 			PreparedStatement ps = connection.prepareStatement(SQL_SELECT_ALL_USERS);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
-				UserDTO user = mapRecordToUserDTO(rs);
+				User user = mapRecordToUserDTO(rs);
 				userList.add(user);
 			}
 
@@ -96,7 +96,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public UserDTO getByPK(Long id) {
+	public User getByPK(Long id) {
 		return null;
 	}
 
