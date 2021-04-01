@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Manager
+Bundle-SymbolicName: org.burakisik.osgi.display.manager
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.burakisik.osgi.display.manager
+Bundle-RequiredExecutionEnvironment: JavaSE-15
