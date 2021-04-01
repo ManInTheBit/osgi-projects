@@ -20,4 +20,6 @@ public interface UiService {
 	public JPanel getRightSidePanel();
 	
 	public JFrame getErrorDialog();
+	
+	public void showMainFrame();
 }

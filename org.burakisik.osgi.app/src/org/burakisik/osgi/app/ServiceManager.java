@@ -27,8 +27,8 @@ public class ServiceManager {
 	public void init() {
 		emergencyService.showEmergencyDialog();
 		gpsService.findCurrentLocation();
-		uiService.getMainFrame();//.setVisible(true);
-		uiService.getErrorDialog();
+		uiService.showMainFrame();
+		//uiService.getErrorDialog();
 	}
 	
 	public void setEmergencyService(EmergencyService emergencyService) {

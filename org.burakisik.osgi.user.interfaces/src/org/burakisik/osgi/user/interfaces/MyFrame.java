@@ -15,16 +15,16 @@ import static org.burakisik.osgi.user.interfaces.UIConstants.*;
 
 
 public class MyFrame extends JFrame {
-	final Logger logger = LogManager.getLogger(MyFrame.class);
-
 	
+	private final Logger logger = LogManager.getLogger(MyFrame.class);
+
+	private static final long serialVersionUID = -809096053787527060L;
 	private JButton btnNorth, btnSouth, btnCenter, btnEast, btnWest;
 
 	public MyFrame() {
 		setTitle(InternationalizingManager.fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
-		setSize(400, 400);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(new Point(300, 200));
 		setLayout(null);
 		setResizable(false);
 

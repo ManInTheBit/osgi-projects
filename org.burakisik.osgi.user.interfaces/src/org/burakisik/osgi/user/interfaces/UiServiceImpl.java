@@ -4,10 +4,18 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.burakisik.osgi.user.interfaces.component.ErrorDialog;
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 
 @Component(service = UiService.class, immediate = true)
 public class UiServiceImpl implements UiService{
+	
+	private JFrame mainFrame;
+	
+	@Activate
+	protected void activate() {
+		this.mainFrame = new MyFrame();
+	}
 
 	@Override
 	public JPanel getEmergencyPanel() {
@@ -31,7 +39,7 @@ public class UiServiceImpl implements UiService{
 
 	@Override
 	public JFrame getMainFrame() {
-		return new MyFrame();
+		return mainFrame;
 	}
 
 	@Override
@@ -50,6 +58,11 @@ public class UiServiceImpl implements UiService{
 	public JFrame getErrorDialog() {
 		// TODO Auto-generated method stub
 		return new ErrorDialog();
+	}
+
+	@Override
+	public void showMainFrame() {
+		mainFrame.setVisible(true);
 	}
 
 }
