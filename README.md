@@ -1,1 +1,1 @@
-"# osgi-projects" 
+# osgi-projects
