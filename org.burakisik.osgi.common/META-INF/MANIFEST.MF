@@ -7,4 +7,5 @@ Automatic-Module-Name: org.burakisik.osgi.common
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.burakisik.osgi.common,
  org.burakisik.osgi.common.data,
- org.burakisik.osgi.common.utils
+ org.burakisik.osgi.common.service.ui,
+ org.burakisik.osgi.common.service.utils

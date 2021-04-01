@@ -1,4 +1,4 @@
-package org.burakisik.osgi.common.utils;
+package org.burakisik.osgi.common.service.utils;
 
 public interface StringUtils {
 		

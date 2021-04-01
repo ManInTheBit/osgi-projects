@@ -1,6 +1,7 @@
 package org.burakisik.osgi.declarative.service;
 
-import org.burakisik.osgi.declarative.service.model.Location;
+import org.burakisik.osgi.common.data.Location;
+import org.burakisik.osgi.common.service.ui.GpsService;
 import org.osgi.service.component.annotations.Component;
 
 

@@ -6,9 +6,9 @@ Bundle-Version: 1.0.0.v20200301-1918
 Automatic-Module-Name: org.burakisik.osgi.app
 Import-Package: org.apache.log4j;version="1.2.17",
  org.burakisik.osgi.common.data,
- org.burakisik.osgi.common.utils,
+ org.burakisik.osgi.common.service.ui,
+ org.burakisik.osgi.common.service.utils,
  org.burakisik.osgi.declarative.service,
- org.burakisik.osgi.declarative.service.model,
  org.burakisik.osgi.logger,
  org.burakisik.osgi.user.interfaces,
  org.eclipse.osgi.framework.console;version="1.0.0",

@@ -1,8 +1,8 @@
 package org.burakisik.osgi.app;
 
-import org.burakisik.osgi.common.utils.Environment;
-import org.burakisik.osgi.declarative.service.EmergencyService;
-import org.burakisik.osgi.declarative.service.GpsService;
+import org.burakisik.osgi.common.service.ui.EmergencyService;
+import org.burakisik.osgi.common.service.ui.GpsService;
+import org.burakisik.osgi.common.service.utils.Environment;
 import org.burakisik.osgi.user.interfaces.UiService;
 
 public class ServiceManager {

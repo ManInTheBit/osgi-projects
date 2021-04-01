@@ -1,5 +1,6 @@
 package org.burakisik.osgi.declarative.service;
 
+import org.burakisik.osgi.common.service.ui.EmergencyService;
 import org.osgi.service.component.annotations.Component;
 
 @Component(service = EmergencyService.class, immediate = true)

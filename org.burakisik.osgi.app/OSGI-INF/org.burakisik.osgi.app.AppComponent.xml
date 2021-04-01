@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="org.burakisik.osgi.app.AppComponent">
-   <reference bind="setEmergencyService" cardinality="1..1" interface="org.burakisik.osgi.declarative.service.EmergencyService" name="EmergencyService"/>
-   <reference bind="setEnvironmentService" cardinality="1..1" interface="org.burakisik.osgi.common.utils.Environment" name="EnvironmentService"/>
-   <reference bind="setGpsService" cardinality="1..1" interface="org.burakisik.osgi.declarative.service.GpsService" name="GpsService"/>
+   <reference bind="setEmergencyService" cardinality="1..1" interface="org.burakisik.osgi.common.service.ui.EmergencyService" name="EmergencyService"/>
+   <reference bind="setEnvironmentService" cardinality="1..1" interface="org.burakisik.osgi.common.service.utils.Environment" name="EnvironmentService"/>
+   <reference bind="setGpsService" cardinality="1..1" interface="org.burakisik.osgi.common.service.ui.GpsService" name="GpsService"/>
    <reference bind="setLoggerService" cardinality="0..1" interface="org.burakisik.osgi.logger.OSGiLoggerComponent" name="LoggerService"/>
    <reference bind="setUi" cardinality="1..1" interface="org.burakisik.osgi.user.interfaces.UiService" name="Ui"/>
    <implementation class="org.burakisik.osgi.app.AppComponent"/>

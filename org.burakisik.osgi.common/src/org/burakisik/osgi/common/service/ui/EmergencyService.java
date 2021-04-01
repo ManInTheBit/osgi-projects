@@ -1,4 +1,4 @@
-package org.burakisik.osgi.declarative.service;
+package org.burakisik.osgi.common.service.ui;
 
 public interface EmergencyService {
 

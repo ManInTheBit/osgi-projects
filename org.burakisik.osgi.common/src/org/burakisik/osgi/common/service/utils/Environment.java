@@ -1,4 +1,4 @@
-package org.burakisik.osgi.common.utils;
+package org.burakisik.osgi.common.service.utils;
 
 import org.burakisik.osgi.common.data.CpuUsage;
 

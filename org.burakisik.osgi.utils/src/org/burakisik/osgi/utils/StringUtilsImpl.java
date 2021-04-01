@@ -1,6 +1,6 @@
 package org.burakisik.osgi.utils;
 
-import org.burakisik.osgi.common.utils.StringUtils;
+import org.burakisik.osgi.common.service.utils.StringUtils;
 import org.osgi.service.component.annotations.*;
 
 @Component

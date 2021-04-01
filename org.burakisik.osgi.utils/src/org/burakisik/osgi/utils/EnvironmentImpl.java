@@ -2,8 +2,8 @@ package org.burakisik.osgi.utils;
 
 import java.lang.management.ManagementFactory;
 import org.burakisik.osgi.common.data.CpuUsage;
-import org.burakisik.osgi.common.utils.Environment;
-import org.burakisik.osgi.common.utils.StringUtils;
+import org.burakisik.osgi.common.service.utils.Environment;
+import org.burakisik.osgi.common.service.utils.StringUtils;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;

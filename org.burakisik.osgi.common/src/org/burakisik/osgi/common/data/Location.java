@@ -1,4 +1,4 @@
-package org.burakisik.osgi.declarative.service.model;
+package org.burakisik.osgi.common.data;
 
 public class Location {
 

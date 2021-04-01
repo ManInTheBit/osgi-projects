@@ -1,6 +1,6 @@
-package org.burakisik.osgi.declarative.service;
+package org.burakisik.osgi.common.service.ui;
 
-import org.burakisik.osgi.declarative.service.model.Location;
+import org.burakisik.osgi.common.data.Location;
 
 public interface GpsService {
 
