@@ -19,7 +19,7 @@ public class MyFrame extends JFrame {
 	private final Logger logger = LogManager.getLogger(MyFrame.class);
 
 	private static final long serialVersionUID = -809096053787527060L;
-	private JButton btnNorth, btnSouth, btnCenter, btnEast, btnWest;
+	private JButton btnNorth, btnSouth, btnEast, btnWest;
 
 	public MyFrame() {
 		setTitle(InternationalizingManager.fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
@@ -40,8 +40,6 @@ public class MyFrame extends JFrame {
 		add(btnNorth, BorderLayout.NORTH);
 		btnSouth = new JButton(FOOTER_PANEL_TITLE);
 		add(btnSouth, BorderLayout.SOUTH);
-		btnCenter = new JButton(GPS_PANEL_TITLE);
-		add(btnCenter, BorderLayout.CENTER);
 		btnEast = new JButton(LEFT_PANEL_TITLE);
 		add(btnEast, BorderLayout.EAST);
 		btnWest = new JButton(RIGHT_PANEL_TITLE);

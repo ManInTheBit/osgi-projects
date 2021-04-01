@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="org.burakisik.osgi.app.AppComponent">
+   <reference bind="setAircraftDetectorService" cardinality="1..1" interface="org.burakisik.osgi.common.service.ui.AircraftDetectorService" name="AircraftDetectorService"/>
    <reference bind="setEmergencyService" cardinality="1..1" interface="org.burakisik.osgi.common.service.ui.EmergencyService" name="EmergencyService"/>
    <reference bind="setEnvironmentService" cardinality="1..1" interface="org.burakisik.osgi.common.service.utils.Environment" name="EnvironmentService"/>
    <reference bind="setGpsService" cardinality="1..1" interface="org.burakisik.osgi.common.service.ui.GpsService" name="GpsService"/>

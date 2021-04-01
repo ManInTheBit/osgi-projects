@@ -1,5 +1,8 @@
 package org.burakisik.osgi.app;
 
+import java.awt.BorderLayout;
+
+import org.burakisik.osgi.common.service.ui.AircraftDetectorService;
 import org.burakisik.osgi.common.service.ui.EmergencyService;
 import org.burakisik.osgi.common.service.ui.GpsService;
 import org.burakisik.osgi.common.service.utils.Environment;
@@ -11,6 +14,7 @@ public class ServiceManager {
 	private GpsService gpsService;
 	private Environment environmentService;
 	private EmergencyService emergencyService;
+	private AircraftDetectorService aircraftDetectorService;
 
 	private static ServiceManager serviceManager;
 
@@ -27,6 +31,7 @@ public class ServiceManager {
 	public void init() {
 		emergencyService.showEmergencyDialog();
 		gpsService.findCurrentLocation();
+		uiService.getMainFrame().getContentPane().add(aircraftDetectorService.getView(), BorderLayout.CENTER);
 		uiService.showMainFrame();
 		//uiService.getErrorDialog();
 	}
@@ -49,5 +54,13 @@ public class ServiceManager {
 	
 	public Environment getEnvironmentService() {
 		return environmentService;
+	}
+
+	public void setAircraftDetectorService(AircraftDetectorService aircraftDetectorService) {
+	   this.aircraftDetectorService = aircraftDetectorService;
+	}
+	
+	public AircraftDetectorService getAircraftDetectorService() {
+		return aircraftDetectorService;
 	}
 }

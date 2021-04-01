@@ -2,6 +2,7 @@ package org.burakisik.osgi.app;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.burakisik.osgi.common.service.ui.AircraftDetectorService;
 import org.burakisik.osgi.common.service.ui.EmergencyService;
 import org.burakisik.osgi.common.service.ui.GpsService;
 import org.burakisik.osgi.common.service.utils.Environment;
@@ -59,6 +60,11 @@ public class AppComponent {
 	@Reference(cardinality = ReferenceCardinality.MANDATORY)
 	public void setEnvironmentService(Environment environment) {
 		ServiceManager.getInstance().setEnvironmentService(environment);
+	}
+	
+	@Reference(cardinality = ReferenceCardinality.MANDATORY)
+	public void setAircraftDetectorService(AircraftDetectorService AircraftDetectorService) {
+		ServiceManager.getInstance().setAircraftDetectorService(AircraftDetectorService);
 	}
 
 }

@@ -5,3 +5,7 @@ Bundle-SymbolicName: org.burakisik.osgi.aircraft.detector
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.burakisik.osgi.aircraft.detector
 Bundle-RequiredExecutionEnvironment: JavaSE-15
+Import-Package: org.burakisik.osgi.common.service.ui,
+ org.osgi.service.component.annotations;version="1.3.0"
+Service-Component: OSGI-INF/org.burakisik.osgi.aircraft.detector.AircraftDetectorServiceImpl.xml
+Bundle-ActivationPolicy: lazy
