@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
-<booleanAttribute key="append.args" value="true"/>
-<booleanAttribute key="automaticAdd" value="true"/>
-<booleanAttribute key="automaticValidate" value="true"/>
-<stringAttribute key="bootstrap" value=""/>
-<stringAttribute key="checked" value="[NONE]"/>
-<booleanAttribute key="clearConfig" value="true"/>
-<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/run_configuration"/>
-<booleanAttribute key="default" value="true"/>
-<booleanAttribute key="default_auto_start" value="true"/>
-<intAttribute key="default_start_level" value="4"/>
-<setAttribute key="deselected_workspace_bundles"/>
-<booleanAttribute key="includeOptional" value="true"/>
-<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.8"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
-<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dlog4j.debug=false  -Dlog4j.configuration=file:C:\Users\burak\Desktop\osgi-projects\log4j.xml"/>
-<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\burak\Desktop\osgi-projects"/>
-<stringAttribute key="pde.version" value="3.3"/>
-<setAttribute key="selected_target_bundles">
-<setEntry value="javax.persistence@default:default"/>
-<setEntry value="log4j.apache-log4j-extras@default:default"/>
-<setEntry value="log4j@default:default"/>
-<setEntry value="org.apache.felix.gogo.runtime@default:default"/>
-<setEntry value="org.apache.felix.gogo.shell@default:default"/>
-<setEntry value="org.apache.felix.scr@1:true"/>
-<setEntry value="org.eclipse.equinox.console@default:default"/>
-<setEntry value="org.eclipse.osgi.services@default:default"/>
-<setEntry value="org.eclipse.osgi.util@default:default"/>
-<setEntry value="org.eclipse.osgi@-1:true"/>
-<setEntry value="org.osgi.service.jdbc@default:default"/>
-<setEntry value="org.osgi.service.jpa@default:default"/>
-<setEntry value="org.osgi.service.transaction.control@default:default"/>
-</setAttribute>
-<setAttribute key="selected_workspace_bundles">
-<setEntry value="com.burakisik.osgi.log@default:default"/>
-<setEntry value="org.burakisik.osgi.annotations@default:default"/>
-<setEntry value="org.burakisik.osgi.app@default:default"/>
-<setEntry value="org.burakisik.osgi.commander@default:default"/>
-<setEntry value="org.burakisik.osgi.common@default:default"/>
-<setEntry value="org.burakisik.osgi.custom.console.commands@default:default"/>
-<setEntry value="org.burakisik.osgi.data.manager@default:default"/>
-<setEntry value="org.burakisik.osgi.declarative.service@default:default"/>
-<setEntry value="org.burakisik.osgi.exception.handler@default:default"/>
-<setEntry value="org.burakisik.osgi.functional.interfaces@default:default"/>
-<setEntry value="org.burakisik.osgi.logger@default:default"/>
-<setEntry value="org.burakisik.osgi.soldier@default:default"/>
-<setEntry value="org.burakisik.osgi.user.interfaces@default:default"/>
-</setAttribute>
-<booleanAttribute key="show_selected_only" value="false"/>
-<booleanAttribute key="tracing" value="false"/>
-<booleanAttribute key="useCustomFeatures" value="false"/>
-<booleanAttribute key="useDefaultConfigArea" value="true"/>
+    <booleanAttribute key="append.args" value="true"/>
+    <booleanAttribute key="automaticAdd" value="true"/>
+    <booleanAttribute key="automaticValidate" value="true"/>
+    <stringAttribute key="bootstrap" value=""/>
+    <stringAttribute key="checked" value="[NONE]"/>
+    <booleanAttribute key="clearConfig" value="true"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/run_configuration"/>
+    <booleanAttribute key="default" value="true"/>
+    <booleanAttribute key="default_auto_start" value="true"/>
+    <intAttribute key="default_start_level" value="4"/>
+    <setAttribute key="deselected_workspace_bundles"/>
+    <booleanAttribute key="includeOptional" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dlog4j.debug=false  -Dlog4j.configuration=file:/home/burak/eclipse-workspace/osgi-projects/log4j.properties  --enable-preview"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/home/burak/eclipse-workspace/osgi-projects"/>
+    <stringAttribute key="pde.version" value="3.3"/>
+    <setAttribute key="selected_target_bundles">
+        <setEntry value="javax.persistence@default:default"/>
+        <setEntry value="log4j.apache-log4j-extras@default:default"/>
+        <setEntry value="log4j@default:default"/>
+        <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
+        <setEntry value="org.apache.felix.scr@1:true"/>
+        <setEntry value="org.eclipse.equinox.console@default:default"/>
+        <setEntry value="org.eclipse.osgi.services@default:default"/>
+        <setEntry value="org.eclipse.osgi.util@default:default"/>
+        <setEntry value="org.eclipse.osgi@-1:true"/>
+        <setEntry value="org.osgi.service.jdbc@default:default"/>
+        <setEntry value="org.osgi.service.jpa@default:default"/>
+        <setEntry value="org.osgi.service.transaction.control@default:default"/>
+    </setAttribute>
+    <setAttribute key="selected_workspace_bundles">
+        <setEntry value="com.burakisik.osgi.log@default:default"/>
+        <setEntry value="org.burakisik.osgi.annotations@default:default"/>
+        <setEntry value="org.burakisik.osgi.app@default:default"/>
+        <setEntry value="org.burakisik.osgi.commander@default:default"/>
+        <setEntry value="org.burakisik.osgi.common@default:default"/>
+        <setEntry value="org.burakisik.osgi.custom.console.commands@default:default"/>
+        <setEntry value="org.burakisik.osgi.data.manager@default:default"/>
+        <setEntry value="org.burakisik.osgi.declarative.service@default:default"/>
+        <setEntry value="org.burakisik.osgi.exception.handler@default:default"/>
+        <setEntry value="org.burakisik.osgi.functional.interfaces@default:default"/>
+        <setEntry value="org.burakisik.osgi.logger@default:default"/>
+        <setEntry value="org.burakisik.osgi.soldier@default:default"/>
+        <setEntry value="org.burakisik.osgi.user.interfaces@default:default"/>
+        <setEntry value="org.burakisik.osgi.utils@default:default"/>
+    </setAttribute>
+    <booleanAttribute key="show_selected_only" value="false"/>
+    <booleanAttribute key="tracing" value="false"/>
+    <booleanAttribute key="useCustomFeatures" value="false"/>
+    <booleanAttribute key="useDefaultConfigArea" value="true"/>
 </launchConfiguration>
