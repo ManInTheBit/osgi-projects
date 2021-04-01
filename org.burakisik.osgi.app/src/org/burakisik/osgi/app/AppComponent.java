@@ -2,6 +2,7 @@ package org.burakisik.osgi.app;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.burakisik.osgi.common.utils.Environment;
 import org.burakisik.osgi.declarative.service.EmergencyService;
 import org.burakisik.osgi.declarative.service.GpsService;
 import org.burakisik.osgi.logger.OSGiLoggerComponent;
@@ -18,16 +19,19 @@ public class AppComponent {
 
 	@Activate
 	protected void activate() {
-		logger.info("AppComponent.activate()");
+		logger.info("AppComponent.activate()" );
 		ServiceManager.getInstance().init();
-
+		Environment environmentService = ServiceManager.getInstance().getEnvironmentService();
+		
 		while (true) {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			AppUtils.printCpuUsage();
+			
+			logger.info("JVM CPU usage %" + environmentService.cpuUsage().jvm());
+			logger.info("System CPU usage %" + environmentService.cpuUsage().system());
 		}
 	}
 
@@ -50,6 +54,11 @@ public class AppComponent {
 	public void setLoggerService(OSGiLoggerComponent loggerComponent) {
 		// Logger logger = Logger.getLogger(AppComponent.class.getName());
 		// loggerComponent.setLoggerProperties(logger);
+	}
+	
+	@Reference(cardinality = ReferenceCardinality.MANDATORY)
+	public void setEnvironmentService(Environment environment) {
+		ServiceManager.getInstance().setEnvironmentService(environment);
 	}
 
 }

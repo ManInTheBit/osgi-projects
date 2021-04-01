@@ -5,4 +5,6 @@ Bundle-SymbolicName: org.burakisik.osgi.common
 Bundle-Version: 1.0.0
 Automatic-Module-Name: org.burakisik.osgi.common
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: org.burakisik.osgi.common
+Export-Package: org.burakisik.osgi.common,
+ org.burakisik.osgi.common.data,
+ org.burakisik.osgi.common.utils

@@ -11,10 +11,4 @@ public class AppUtils {
 
 	private static final Logger logger = LogManager.getLogger(AppUtils.class);
 
-	public static void printCpuUsage() {
-		OperatingSystemMXBean osBean = ManagementFactory.getPlatformMXBean(OperatingSystemMXBean.class);
-		logger.info("JVM CPU usage %" + osBean.getProcessCpuLoad());
-		logger.info("System CPU usage %" + osBean.getSystemCpuLoad());
-	}
-
 }
