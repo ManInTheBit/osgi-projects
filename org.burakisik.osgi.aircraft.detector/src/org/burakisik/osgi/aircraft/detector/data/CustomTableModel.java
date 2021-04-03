@@ -1,4 +1,4 @@
-package org.burakisik.osgi.aircraft.detector;
+package org.burakisik.osgi.aircraft.detector.data;
 
 import javax.swing.table.DefaultTableModel;
 

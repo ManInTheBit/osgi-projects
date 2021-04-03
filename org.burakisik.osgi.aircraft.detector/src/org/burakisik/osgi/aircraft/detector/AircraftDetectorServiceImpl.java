@@ -2,6 +2,7 @@ package org.burakisik.osgi.aircraft.detector;
 
 import javax.swing.JPanel;
 
+import org.burakisik.osgi.aircraft.detector.view.DetectedAircraftListView;
 import org.burakisik.osgi.common.service.ui.AircraftDetectorService;
 import org.osgi.service.component.annotations.Component;
 

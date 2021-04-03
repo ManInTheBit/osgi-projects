@@ -1,10 +1,12 @@
-package org.burakisik.osgi.aircraft.detector;
+package org.burakisik.osgi.aircraft.detector.view;
 
 import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+
+import org.burakisik.osgi.aircraft.detector.data.CustomTableModel;
 
 public class DetectedAircraftListView extends JPanel {
 	

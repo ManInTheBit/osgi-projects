@@ -1,9 +1,11 @@
-package org.burakisik.osgi.aircraft.detector;
+package org.burakisik.osgi.aircraft.detector.view;
 
 import java.awt.Component;
 
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;
+
+import org.burakisik.osgi.aircraft.detector.data.Cell;
 
 public class CellRenderer implements TableCellRenderer{
 
