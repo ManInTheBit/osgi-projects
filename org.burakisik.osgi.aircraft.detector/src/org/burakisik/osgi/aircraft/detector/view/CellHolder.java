@@ -17,8 +17,7 @@ public class CellHolder extends JPanel {
 		 add(lblYear);
 	     add(lblModel);
 	     add(lblManufacturer);
-	     add(lblPhysicalClassByEngine);
-	     
+	     add(lblPhysicalClassByEngine);     
 	}
 
 }
