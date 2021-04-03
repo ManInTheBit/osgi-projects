@@ -9,12 +9,16 @@ import org.burakisik.osgi.aircraft.detector.data.Cell;
 public class CellHolder extends JPanel {
 	
 	public CellHolder(Cell item) {
-		 JCheckBox chckbxSomeValue = new JCheckBox();
-	     chckbxSomeValue.setSelected(item.flag());
-		 JLabel lblNewLabel = new JLabel(item.text());
-	    
-	     add(lblNewLabel);
-	     add(chckbxSomeValue);
+		 JLabel lblModel = new JLabel(item.model());
+		 JLabel lblManufacturer = new JLabel(item.manufacturer());
+		 JLabel lblYear = new JLabel(String.valueOf(item.completedYear()));
+		 JLabel lblPhysicalClassByEngine = new JLabel(item.physicalClassByEngine());
+
+		 add(lblYear);
+	     add(lblModel);
+	     add(lblManufacturer);
+	     add(lblPhysicalClassByEngine);
+	     
 	}
 
 }
