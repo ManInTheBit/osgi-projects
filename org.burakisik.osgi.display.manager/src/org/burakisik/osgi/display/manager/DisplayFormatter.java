@@ -1,5 +1,38 @@
 package org.burakisik.osgi.display.manager;
 
-public class DisplayFormatter {
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.swing.JPanel;
+
+import org.burakisik.osgi.common.data.DisplayInfo;
+import org.burakisik.osgi.common.service.ui.PanelPresenter;
+import org.burakisik.osgi.common.service.utils.Environment;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Reference;
+
+public class DisplayFormatter {
+	
+	private Environment environment;
+	private List<JPanel>  panels = new ArrayList<JPanel>();
+	
+	@Activate
+	protected void activate() {
+		constructScreen();
+	}
+	
+	@Reference
+	protected void setPanel(PanelPresenter pp) {
+		panels.add(pp.present());
+	}
+	
+	@Reference
+	protected void setEnvironment(Environment environment) {
+		this.environment = environment;
+	}
+	
+	private void constructScreen() {
+		DisplayInfo displayInfo =  environment.displayInfo();
+		// TODO Auto-generated method stub
+	}
 }

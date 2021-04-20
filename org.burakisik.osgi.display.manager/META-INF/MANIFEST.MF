@@ -5,3 +5,7 @@ Bundle-SymbolicName: org.burakisik.osgi.display.manager
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.burakisik.osgi.display.manager
 Bundle-RequiredExecutionEnvironment: JavaSE-15
+Import-Package: org.burakisik.osgi.common.data,
+ org.burakisik.osgi.common.service.ui,
+ org.burakisik.osgi.common.service.utils,
+ org.osgi.service.component.annotations

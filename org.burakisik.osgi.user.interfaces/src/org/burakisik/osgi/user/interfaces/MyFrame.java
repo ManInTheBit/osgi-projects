@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import static org.burakisik.osgi.user.interfaces.UIConstants.*;
+import static org.burakisik.osgi.user.interfaces.UiConstants.*;
 
 
 public class MyFrame extends JFrame {

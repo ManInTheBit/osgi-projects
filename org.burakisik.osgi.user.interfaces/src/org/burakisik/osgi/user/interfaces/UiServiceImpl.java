@@ -3,6 +3,7 @@ package org.burakisik.osgi.user.interfaces;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import org.burakisik.osgi.common.service.ui.UiService;
 import org.burakisik.osgi.user.interfaces.component.ErrorDialog;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;

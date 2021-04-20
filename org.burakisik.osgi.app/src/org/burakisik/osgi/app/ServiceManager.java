@@ -5,8 +5,8 @@ import java.awt.BorderLayout;
 import org.burakisik.osgi.common.service.ui.AircraftDetectorService;
 import org.burakisik.osgi.common.service.ui.EmergencyService;
 import org.burakisik.osgi.common.service.ui.GpsService;
+import org.burakisik.osgi.common.service.ui.UiService;
 import org.burakisik.osgi.common.service.utils.Environment;
-import org.burakisik.osgi.user.interfaces.UiService;
 
 public class ServiceManager {
 

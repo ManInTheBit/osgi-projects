@@ -1,4 +1,4 @@
-package org.burakisik.osgi.user.interfaces;
+package org.burakisik.osgi.common.service.ui;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

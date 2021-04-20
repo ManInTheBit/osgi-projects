@@ -29,8 +29,7 @@ public class EnvironmentImpl implements Environment {
 	}
 	
 	@Override
-	public DisplayInfo displayInfo() {
-		
+	public DisplayInfo displayInfo() {	
 		return new DisplayInfo((byte)totalDevices(), displayWidth(), displayHeight());
 	}
 	
