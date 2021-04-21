@@ -22,12 +22,11 @@ public class MyFrame extends JFrame {
 	private JButton btnNorth, btnSouth, btnEast, btnWest;
 
 	public MyFrame() {
-		setTitle(InternationalizingManager.fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
+		setTitle(Services.getInstance().getI18n().fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
-
 		initComponent();
 		initEvent();
 		setVisible(true);

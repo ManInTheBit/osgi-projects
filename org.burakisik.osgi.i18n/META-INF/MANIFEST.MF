@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: I18n
+Bundle-SymbolicName: org.burakisik.osgi.i18n
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.burakisik.osgi.i18n
+Bundle-RequiredExecutionEnvironment: JavaSE-15

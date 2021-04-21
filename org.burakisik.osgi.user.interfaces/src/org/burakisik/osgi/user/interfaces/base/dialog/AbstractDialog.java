@@ -6,7 +6,7 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import org.burakisik.osgi.user.interfaces.InternationalizingManager;
+import org.burakisik.osgi.user.interfaces.Services;
 
 public abstract class  AbstractDialog extends JFrame{
 	
@@ -20,7 +20,7 @@ public abstract class  AbstractDialog extends JFrame{
 	private void init( ) {
 		Container cp = getContentPane();
 		cp.setLayout(new BorderLayout()); 
-		txtField = new JTextField(InternationalizingManager.fetchTextfromResourceBundle("default_dialog_message"));
+		txtField = new JTextField(Services.getInstance().getI18n().fetchTextfromResourceBundle("default_dialog_message"));
 		txtField.setHorizontalAlignment(JTextField.CENTER);
 		txtField.setEditable(false);
 		cp.add(txtField, BorderLayout.CENTER);
