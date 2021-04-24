@@ -3,6 +3,6 @@
    <service>
       <provide interface="org.burakisik.osgi.common.service.ui.UiService"/>
    </service>
-   <reference bind="setI18n" cardinality="0..1" interface="org.burakisik.osgi.common.service.i18n.InternationalizationService" name="I18n"/>
+   <reference bind="setI18n" interface="org.burakisik.osgi.common.service.i18n.InternationalizationService" name="I18n"/>
    <implementation class="org.burakisik.osgi.user.interfaces.UiServiceImpl"/>
 </scr:component>

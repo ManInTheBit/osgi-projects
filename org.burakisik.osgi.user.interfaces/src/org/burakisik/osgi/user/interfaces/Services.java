@@ -13,7 +13,7 @@ public class Services {
 	
 	public static Services getInstance() {
 		if(instance == null) {
-			new Services();
+			instance = new Services();
 		}
 		return instance;
 	}

@@ -21,7 +21,7 @@ public class UiServiceImpl implements UiService{
 		System.out.println("UiServiceImpl.activate()");
 	}
 	
-	@Reference(cardinality = ReferenceCardinality.OPTIONAL)
+	@Reference
 	protected void setI18n(InternationalizationService service) {
 		Services.getInstance().setI18n(service);
 	}
