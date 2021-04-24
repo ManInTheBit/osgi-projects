@@ -9,8 +9,10 @@ import org.burakisik.osgi.common.data.DisplayInfo;
 import org.burakisik.osgi.common.service.ui.PanelPresenter;
 import org.burakisik.osgi.common.service.utils.Environment;
 import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+@Component
 public class DisplayFormatter {
 	
 	private Environment environment;
@@ -23,7 +25,7 @@ public class DisplayFormatter {
 	
 	@Reference
 	protected void setPanel(PanelPresenter pp) {
-		panels.add(pp.present());
+		panels.addAll(pp.present());
 	}
 	
 	@Reference
@@ -33,6 +35,6 @@ public class DisplayFormatter {
 	
 	private void constructScreen() {
 		DisplayInfo displayInfo =  environment.displayInfo();
-		// TODO Auto-generated method stub
+		MainFrame mainFrame = new MainFrame(panels);
 	}
 }

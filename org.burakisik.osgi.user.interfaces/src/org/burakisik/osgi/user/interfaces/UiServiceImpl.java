@@ -1,23 +1,28 @@
 package org.burakisik.osgi.user.interfaces;
 
-import javax.swing.JFrame;
+import java.awt.Color;
+import java.awt.Label;
+import java.awt.Rectangle;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
+import org.burakisik.osgi.common.data.Placement;
 import org.burakisik.osgi.common.service.i18n.InternationalizationService;
-import org.burakisik.osgi.common.service.ui.UiService;
-import org.burakisik.osgi.user.interfaces.component.ErrorDialog;
+import org.burakisik.osgi.common.service.ui.PanelPresenter;
+import org.burakisik.osgi.common.service.ui.component.CustomPanel;
+import org.burakisik.osgi.common.type.LocationOnScreen;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 
-@Component(service = UiService.class, immediate = true)
-public class UiServiceImpl implements UiService{
-	
-	private JFrame mainFrame;
-	
+@Component(service = PanelPresenter.class, immediate = true)
+public class UiServiceImpl implements PanelPresenter {
+		
 	@Activate
 	protected void activate() {
-		this.mainFrame = new MyFrame();
 		System.out.println("UiServiceImpl.activate()");
 	}
 	
@@ -27,51 +32,20 @@ public class UiServiceImpl implements UiService{
 	}
 
 	@Override
-	public JPanel getEmergencyPanel() {
-		return null;
+	public List<JPanel> present() {
+		List<JPanel> panels = new ArrayList<>();
+		panels.add(leftPanel());
+		return panels;
 	}
 
-	@Override
-	public JPanel getGpsPanel() {
-		return null;
+	private JPanel leftPanel() {
+		JPanel leftSideBar = new CustomPanel(new Placement(LocationOnScreen.LEFT, new Rectangle(10,200)));
+		leftSideBar.add(new Label("Item1"));
+		leftSideBar.add(new Label("Item2"));
+		leftSideBar.add(new Label("Item3"));
+		leftSideBar.add(new Label("Item4"));
+		leftSideBar.setBackground(Color.LIGHT_GRAY);
+		leftSideBar.setLayout(new BoxLayout(leftSideBar, BoxLayout.Y_AXIS));
+		return leftSideBar;
 	}
-
-	@Override
-	public JPanel getHeaderPanel() {
-		return null;
-	}
-
-	@Override
-	public JPanel getFooterPanel() {
-		return null;
-	}
-
-	@Override
-	public JFrame getMainFrame() {
-		return mainFrame;
-	}
-
-	@Override
-	public JPanel getLeftSidePanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public JPanel getRightSidePanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public JFrame getErrorDialog() {
-		// TODO Auto-generated method stub
-		return new ErrorDialog();
-	}
-
-	@Override
-	public void showMainFrame() {
-		mainFrame.setVisible(true);
-	}
-
 }

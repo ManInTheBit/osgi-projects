@@ -14,7 +14,6 @@ public class InternationalizationManager implements InternationalizationService 
 
 	@Override
 	public String fetchTextfromResourceBundle(String property) {
-		String value = messages.getString(property);
-		return value;
+		return messages.getString(property);
 	}	
 }
