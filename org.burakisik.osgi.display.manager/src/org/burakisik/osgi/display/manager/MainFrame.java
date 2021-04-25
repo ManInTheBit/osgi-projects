@@ -16,14 +16,13 @@ import org.burakisik.osgi.common.data.Placement;
 import org.burakisik.osgi.common.service.ui.component.CustomPanel;
 
 public class MainFrame extends JFrame {
-
+	
+	private static final long serialVersionUID = -809096053787527060L;
 	private final Logger logger = LogManager.getLogger(MainFrame.class);
 
-	private static final long serialVersionUID = -809096053787527060L;
-	private JButton btnNorth, btnSouth, btnEast, btnWest;
 
 	public MainFrame(List<JPanel> panels) {
-		// setTitle(Services.getInstance().getI18n().fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
+		//setTitle(Services.getInstance().getI18n().fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
@@ -47,12 +46,14 @@ public class MainFrame extends JFrame {
 				break;
 			}
 			case CENTER: {
+				add(panel, BorderLayout.CENTER);
 				break;
 			}
 			case BOTTOM: {
 				break;
 			}
 			case TOP: {
+				add(panel, BorderLayout.NORTH);
 				break;
 			}
 			}});

@@ -7,12 +7,15 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import org.burakisik.osgi.aircraft.detector.data.CustomTableModel;
+import org.burakisik.osgi.common.data.Placement;
+import org.burakisik.osgi.common.service.ui.component.CustomPanel;
 
-public class DetectedAircraftListView extends JPanel {
+public class DetectedAircraftListView extends CustomPanel {
 	
     private JTable table;
 	
-	public DetectedAircraftListView() {
+	public DetectedAircraftListView(Placement placement) {
+		super(placement);
 		init();
 	}
 

@@ -4,5 +4,6 @@
       <provide interface="org.burakisik.osgi.common.service.ui.PanelPresenter"/>
    </service>
    <reference bind="setI18n" interface="org.burakisik.osgi.common.service.i18n.InternationalizationService" name="I18n"/>
+   <reference bind="setSFDS" interface="org.burakisik.osgi.common.service.ui.AircraftDetectorService" name="SFDS"/>
    <implementation class="org.burakisik.osgi.user.interfaces.UiServiceImpl"/>
 </scr:component>

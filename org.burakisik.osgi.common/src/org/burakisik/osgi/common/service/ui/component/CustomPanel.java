@@ -11,8 +11,8 @@ public class CustomPanel extends JPanel {
 
 	public CustomPanel(Placement placement) {
 		this.placement = placement;
-		setLocation(placement.size().x, placement.size().y);
-		setSize(placement.size().width, placement.size().height);
+		//setLocation(placement.size().x, placement.size().y);
+		//setSize(placement.size().width, placement.size().height);
 	}
 	
 	public Placement getPlacement() {
