@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="org.burakisik.osgi.display.manager.DisplayFormatter">
    <reference bind="setEnvironment" interface="org.burakisik.osgi.common.service.utils.Environment" name="Environment"/>
+   <reference bind="setI18n" interface="org.burakisik.osgi.common.service.i18n.InternationalizationService" name="I18n"/>
    <reference bind="setPanel" interface="org.burakisik.osgi.common.service.ui.PanelPresenter" name="Panel"/>
    <implementation class="org.burakisik.osgi.display.manager.DisplayFormatter"/>
 </scr:component>

@@ -69,9 +69,6 @@ public class UiServiceImpl implements PanelPresenter {
 	
 	private JPanel contentPane() {
 		JPanel contentPane  = Services.getInstance().getAircraftDetectorService().getView();
-		//JPanel contentPane = new CustomPanel(new Placement(LocationOnScreen.CENTER, 1));
-		JLabel header = new JLabel("ContentPane");
-		contentPane.add(header);
 		contentPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.setLayout(new FlowLayout());
 		return contentPane;

@@ -21,20 +21,19 @@ public class MainFrame extends JFrame {
 	private final Logger logger = LogManager.getLogger(MainFrame.class);
 
 
-	public MainFrame(List<JPanel> panels) {
-		//setTitle(Services.getInstance().getI18n().fetchTextfromResourceBundle(MAIN_FRAME_TITLE));
+	public MainFrame(List<JPanel> panels, String title) {	
+		setTitle(title);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
 		initComponent(panels);
 		initEvent();
-		setVisible(true);
 	}
 
 	private void initComponent(List<JPanel> panels) {
 		setLayout(new BorderLayout(3, 3));
-
+		
 		panels.forEach(panel -> {
 			Placement placement = ((CustomPanel) panel).getPlacement();
 			switch (placement.location()) {
@@ -57,17 +56,6 @@ public class MainFrame extends JFrame {
 				break;
 			}
 			}});
-
-		/*
-		btnNorth = new JButton(HEADER_PANEL_TITLE);
-		add(btnNorth, BorderLayout.NORTH);
-		btnSouth = new JButton(FOOTER_PANEL_TITLE);
-		add(btnSouth, BorderLayout.SOUTH);
-		btnEast = new JButton(LEFT_PANEL_TITLE);
-		add(btnEast, BorderLayout.EAST);
-		btnWest = new JButton(RIGHT_PANEL_TITLE);
-		add(btnWest, BorderLayout.WEST);
-		*/
 	}
 
 	private void initEvent() {

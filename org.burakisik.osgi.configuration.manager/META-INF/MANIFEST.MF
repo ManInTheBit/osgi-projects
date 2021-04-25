@@ -5,3 +5,7 @@ Bundle-SymbolicName: org.burakisik.osgi.configuration.manager
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.burakisik.osgi.configuration.manager
 Bundle-RequiredExecutionEnvironment: JavaSE-15
+Import-Package: org.burakisik.osgi.common.service.configuration,
+ org.osgi.service.component.annotations
+Service-Component: OSGI-INF/org.burakisik.osgi.configuration.manager.DisplayConfigurationImpl.xml
+Bundle-ActivationPolicy: lazy

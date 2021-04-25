@@ -7,6 +7,7 @@ Automatic-Module-Name: org.burakisik.osgi.display.manager
 Bundle-RequiredExecutionEnvironment: JavaSE-15
 Import-Package: org.apache.log4j;version="1.2.17",
  org.burakisik.osgi.common.data,
+ org.burakisik.osgi.common.service.i18n,
  org.burakisik.osgi.common.service.ui,
  org.burakisik.osgi.common.service.ui.component,
  org.burakisik.osgi.common.service.utils,
